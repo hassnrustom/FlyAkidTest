@@ -98,33 +98,34 @@
                 <h5 class="px-3 pt-2" style="color: blue;">بالغ</h5>
                 <div class="px-2 d-flex justify-content-around ">
                     <div class="d-flex flex-column ms-2">
-                        <font-awesome-icon :icon="['fas', 'chevron-up']" style="color: #ff56a1;" />
-                        <font-awesome-icon :icon="['fas', 'chevron-down']"  style="color: #ff56a1;"/>
+                        <font-awesome-icon @click="increace('adult')" :icon="['fas', 'chevron-up']" style="color: #ff56a1; cursor: pointer;" />
+                        <font-awesome-icon @click="decreace('adult')" :icon="['fas', 'chevron-down']"  style="color: #ff56a1; cursor: pointer;"/>
                         
                     </div>
-                    <h5 class="me-2">1</h5>
+                    <h5 class="me-2">{{ adult }}</h5>
                 </div>
             </div>
             <div class="bg-white" style="width: 32%;">
                 <h5 class="px-3 pt-2" style="color: blue;">طفل</h5>
                 <div class="px-2 d-flex justify-content-around ">
                     <div class="d-flex flex-column ms-2">
-                        <font-awesome-icon :icon="['fas', 'chevron-up']" style="color: #ff56a1;" />
-                        <font-awesome-icon :icon="['fas', 'chevron-down']"  style="color: #ff56a1;"/>
+                        <font-awesome-icon @click="increace('child')" :icon="['fas', 'chevron-up']" style="color: #ff56a1; cursor: pointer;" />
+                        <font-awesome-icon @click="decreace('child')" :icon="['fas', 'chevron-down']"  style="color: #ff56a1; cursor: pointer;"/>
+                        
                         
                     </div>
-                    <h5 class="me-2">0</h5>
+                    <h5 class="me-2">{{ child }}</h5>
                 </div>
             </div>
             <div class="bg-white " style="width: 32%;">
                 <h5 class="px-3 pt-2" style="color: blue;">رضيع</h5>
                 <div class="px-2 d-flex justify-content-around ">
                     <div class="d-flex flex-column ms-2">
-                        <font-awesome-icon :icon="['fas', 'chevron-up']" style="color: #ff56a1;" />
-                        <font-awesome-icon :icon="['fas', 'chevron-down']"  style="color: #ff56a1;"/>
+                        <font-awesome-icon @click="increace('baby')" :icon="['fas', 'chevron-up']" style="color: #ff56a1; cursor: pointer;" />
+                        <font-awesome-icon @click="decreace('baby')" :icon="['fas', 'chevron-down']"  style="color: #ff56a1; cursor: pointer;"/>
                         
                     </div>
-                    <h5 class="me-2">0</h5>
+                    <h5 class="me-2">{{ baby }}</h5>
                 </div>
             </div>
         </div>
@@ -178,10 +179,43 @@ export default {
 
             date: new Date(),
             date1: '',
-            date2: ""
+            date2: "",
+            adult : 1,
+            child: 0,
+            baby: 0
         }
     },
     methods: {
+        decreace(data){
+            if(data == 'adult') {
+                if(this.adult != 1) {
+                    this.adult = this.adult - 1
+                }
+            }
+            if(data == 'child') {
+                if(this.child != 0) {
+                    this.child = this.child - 1
+                }
+            }
+            if(data == 'baby') {
+                if(this.baby != 0) {
+                    this.baby = this.baby - 1
+                }
+            }
+            
+        },
+        increace(data){
+            if(data == 'adult') {
+                this.adult++
+            }
+            if(data == 'child') {
+                this.child++
+            }
+            if(data == 'baby') {
+                this.baby++
+            }
+            
+        },
         selectitem(item){
             // this.enogh = true
             this.from = item.name
@@ -319,6 +353,7 @@ export default {
     background-color: white;
     max-height: 300px;
     overflow-y: auto;
+    z-index: 50;
 }
 
 .iteminrsultfromfrom {

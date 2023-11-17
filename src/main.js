@@ -32,6 +32,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { faCartFlatbedSuitcase } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { faChair } from '@fortawesome/free-solid-svg-icons'
 import { faHotel } from '@fortawesome/free-solid-svg-icons'
 
@@ -43,6 +44,7 @@ library.add(faChevronDown)
 library.add(faChevronUp)
 library.add(faLeftLong)
 library.add(faCartFlatbedSuitcase)
+library.add(faQuoteRight)
 library.add(faChair)
 library.add(faHotel)
 

@@ -22,8 +22,10 @@
                 <MainForm/>
             </div>
             <div class="tab-pane fade show " id="v-pillstow-hotel" role="tabpanel" aria-labelledby="v-pillstow-hotel-tab">
+                <MainForm/>
             </div>
             <div class="tab-pane fade show " id="v-pillstow-go" role="tabpanel" aria-labelledby="v-pillstow-go-tab">
+                <MainForm/>
             </div>
         </div>
     </div>
