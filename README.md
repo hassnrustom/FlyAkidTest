@@ -1,4 +1,4 @@
-# new_memo
+# Fly Akid
 
 ## Project setup
 ```
